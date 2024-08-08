@@ -1,4 +1,7 @@
+import sys
 import os
+sys.path.append(os.path.join(os.path.dirname(__file__), 'external', 'sam2'))
+
 from sam2_annotation.video_loader import load_video
 from sam2_annotation.visualization import show_mask, show_points, mask_to_bb
 from sam2_annotation.annotation import annotate, make_prompts, add_prompts
