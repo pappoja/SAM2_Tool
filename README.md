@@ -1,5 +1,5 @@
 ## SAM 2 Annotation Tool
-##### (see the full notebook [here](/ipynb/SAM2_tool.fixed.html))  
+##### (see the full notebook [here](https://colab.research.google.com/drive/1qkxwwyZefUp54BfyduB7YZCBingJ_xVf?usp=sharing))  
   
   
 **Project description:** In this project, I walk through a user-friendly tool that I created to accurately label a video for object tracking tasks.
