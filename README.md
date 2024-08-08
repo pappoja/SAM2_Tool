@@ -1,5 +1,5 @@
 ## SAM 2 Annotation Tool
-##### (see the full notebook [here](https://colab.research.google.com/drive/1CMIkdfHGK_ULBi1qjec6pLnWZsX7eN7-?usp=sharing))
+##### (see the full notebook [here](/docs/SAM2_tool.fixed.html))  
   
   
 **Project description:** In this project, I walk through a user-friendly tool that I created to accurately label a video for object tracking tasks.
@@ -18,7 +18,7 @@ First, load in an instance of the SAM 2 model. An <code>Inference State</code> i
 
 ### 2. Prompt SAM 2
 
-Because SAM 2 is a promptable visual segmentation model, it cannot detect objects on its own but must be prompted with the object that it should segment and track. I created a user-friendly interface with which you can select points to isolate the object(s) of interest. First, you select the <code>Label</code> of the point; <span style="color: blue;">1</span> indicates that it is on the object, and <span style="color: red;">1</span> indicates that it is *not* on the object (the 1 itself is the object ID). Also, the <code>Object ID</code> feature lets you prompt SAM 2 with multiple objects for independent segmentations; here, however, we only segment one object so the ID is always 1. In the image below, I positively label points on Marshawn Lynch and negatively label points on the defender next to him, thus ensuring that SAM 2 will begin with an accurate mask.
+Because SAM 2 is a promptable visual segmentation model, it cannot detect objects on its own but must be prompted with the object that it should segment and track. I created a user-friendly interface with which you can select points directly on the frame to isolate the object(s) of interest. First, you select the <code>Label</code> of the point, indicated by the color of its marker. A label of 0 means that the point is on the object (see <span style="color: blue;">1</span> below), and a label of 1 means that it is *not* on the object (see <span style="color: red;">1</span> below). Also, the <code>Object ID</code> feature of each clicked point lets you select masks for multiple objects. Here, however, we only segment one object so the ID is always 1 (thus explaining why there are only "1"s on the frame). In the image below, I positively label points on Marshawn Lynch (i.e., Object 1) and negatively label points on the defender next to him, thus ensuring that SAM 2 will begin with an accurate mask.
 
 <img src="images/frame0_labels.png" style="display: block; margin: 0 auto;"/>
 
