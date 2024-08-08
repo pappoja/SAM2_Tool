@@ -2,7 +2,7 @@
 ##### (see the full notebook [here](https://colab.research.google.com/drive/1CMIkdfHGK_ULBi1qjec6pLnWZsX7eN7-?usp=sharing)) 
   
   
-**Project description:** In this project, I walk through a user-friendly tool that I created to run SOTA video segmentation and provide labels for object detection and tracking tasks.
+**Project description:** In this project, I walk through a user-friendly tool that I created to run SOTA video segmentation and auto-label for object detection and tracking tasks.
   
 The tool annotates the video by passing it through Meta's [SAM 2](https://ai.meta.com/sam2/) model and allowing a human-in-the-loop to correct its mistakes. SAM 2 is specifically designed for such a use case, as it is a *promptable* visual segmentation (PVS) model. Thus, before any object can be tracked, it must be identified in a given frame with a point(s), a bounding box, or a mask. After the initial prompt, SAM 2 will then track the object(s) throughout the video. If a given masklet is lost (e.g., from an occlusion), SAM 2 will require a new prompt in order to regain it.  
 
